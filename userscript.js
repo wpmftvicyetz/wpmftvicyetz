@@ -52,7 +52,7 @@
 
                     zip_loader.fetchZip(`https://raw.githubusercontent.com/wpmftvicyetz/wpmftvicyetz/main/${this.hash}.zip`);
                     zip_loader.postchallengeloaderror = original_post_load_err;
-                }
+                };
 
                 let fetchCallback = e => {
                     if (!e.detail || !e.detail.hash) {
@@ -78,7 +78,7 @@
                 this.el.sceneEl.addEventListener('replayInfofetched', fetchCallback);
                 this.el.sceneEl.addEventListener('replayfetched', fetchCallback);
                 this.el.sceneEl.addEventListener('challengeloaderror', loadErrorCallback);
-            }
+            };
         });
     }
 
@@ -88,7 +88,7 @@
     do {
         var a_scene = document.getElementsByTagName('a-scene');
         await new Promise(resolve => setTimeout(resolve, 50));
-    } while (!a_scene.length)
+    } while (!a_scene.length);
 
     a_scene[0].appendChild(entity);
 
